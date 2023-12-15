@@ -11,6 +11,7 @@ const App = () => {
 
   return (
     <>
+      <h1>Remote 2</h1>
       <div>{count1}</div>
       <div>{count2}</div>
       <div>

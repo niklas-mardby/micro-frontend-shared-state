@@ -15,28 +15,29 @@ const App = () => {
 
   return (
     <>
+      <h1>Host</h1>
+      <div>
+        <button onClick={() => setCount1((c) => c + 1)}>+</button>
+        count1: {count1}
+      </div>
+      <div>
+        <button onClick={() => reduxDispatch(increment())}>+</button>
+        count2: {count2}
+      </div>
+      <div>
+        <button onClick={() => setLocalCount1((c) => c + 1)}>+</button>
+        localCount1: {localCount1}
+      </div>
+      <div>
+        <button onClick={() => localReduxDispatch(localIncrement())}>+</button>
+        localCount2: {localCount2}
+      </div>
       <Suspense fallback="loading...">
         <Remote1App />
       </Suspense>
       <Suspense fallback="loading...">
         <Remote2App />
       </Suspense>
-      <div>
-        <button onClick={() => setCount1((c) => c + 1)}>+</button>
-        {count1}
-      </div>
-      <div>
-        <button onClick={() => reduxDispatch(increment())}>+</button>
-        {count2}
-      </div>
-      <div>
-        <button onClick={() => setLocalCount1((c) => c + 1)}>+</button>
-        {localCount1}
-      </div>
-      <div>
-        <button onClick={() => localReduxDispatch(localIncrement())}>+</button>
-        {localCount2}
-      </div>
     </>
   );
 };
