@@ -1,0 +1,20 @@
+{
+  "name": "micro-frontend-shared-state",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/niklas-mardby/micro-frontend-shared-state.git",
+  "author": "Niklas Mårdby <niklas.mardby@lynkco.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "lerna run --parallel start",
+    "build": "lerna run build",
+    "serve": "lerna run --parallel serve"
+  },
+  "devDependencies": {
+    "lerna": "^8.0.0"
+  }
+}
