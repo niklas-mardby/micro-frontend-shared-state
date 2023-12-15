@@ -3,10 +3,12 @@ import React, { lazy, Suspense } from "react";
 import { useSlice } from "shared_state";
 import { useSlice as useLocalSlice } from "./slices";
 
+import RemoteThing from "Remote2/Thing";
+
 const Remote1App = lazy(() => import("Remote1/root"));
 const Remote2App = lazy(() => import("Remote2/root"));
 
-const RemoteThing = lazy(() => import("Remote2/Thing"));
+//const RemoteThing = lazy(() => import("Remote2/Thing"));
 
 const App = () => {
   const [count1, setCount1] = useSlice("count1");
