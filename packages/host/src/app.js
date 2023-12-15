@@ -6,6 +6,8 @@ import { useSlice as useLocalSlice } from "./slices";
 const Remote1App = lazy(() => import("Remote1/root"));
 const Remote2App = lazy(() => import("Remote2/root"));
 
+const RemoteThing = lazy(() => import("Remote2/Thing"));
+
 const App = () => {
   const [count1, setCount1] = useSlice("count1");
   const [count2, reduxDispatch, { increment }] = useSlice("count2");
@@ -16,6 +18,7 @@ const App = () => {
   return (
     <>
       <h1>Host</h1>
+      <RemoteThing />
       <div>
         <button onClick={() => setCount1((c) => c + 1)}>+</button>
         count1: {count1}

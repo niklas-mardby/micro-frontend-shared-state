@@ -31,6 +31,7 @@ module.exports = {
       filename: "moduleEntry2.js",
       exposes: {
         "./root": "./src/root",
+        "./Thing": "./src/Thing",
       },
       shared: {
         ...dependencies,
