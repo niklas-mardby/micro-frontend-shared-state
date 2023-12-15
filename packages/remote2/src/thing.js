@@ -1,4 +1,5 @@
 // remote2/src/thing.js
+
 import React from "react";
 
 const Thing = () => {

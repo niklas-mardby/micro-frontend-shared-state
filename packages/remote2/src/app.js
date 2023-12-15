@@ -1,4 +1,5 @@
 // remote2/src/app.js
+
 import React from "react";
 import { useSlice } from "shared_state";
 import { useSlice as useLocalSlice } from "./slices";
